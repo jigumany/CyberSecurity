@@ -8,7 +8,7 @@ An easy to use online educational platform
 
 Sometimes there are libs that are necessary to run the projects
 
--   [Some lib to install](https://www.npmjs.com/)
+-   any important libraries will be listed here soon
 
 ### Installing
 
@@ -63,9 +63,7 @@ Yes, more commands, this is the real deal now
 
 ## How To Deploy
 
-Omg foreals, I have to do deployment notes too??? Yep...
-
-Make sure to write notes about deployment, is it just merging to master to trigger [Github Actions Pipeline](https://www.youtube.com/watch?v=eGEumlRlqHc)
+I will give you the steps to deploy soon
 
 ## Code Owners
 
@@ -73,8 +71,8 @@ Make sure to write notes about deployment, is it just merging to master to trigg
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Cybersecurity application is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Acknowledgments
 
--   Do we need to give credit to other people or groups? May be fun to share the love here.
+-   will be giving credit to other people here soon.
