@@ -14,9 +14,9 @@ Sometimes there are libs that are necessary to run the projects
 
 Installation steps are necessary so go through each step to do so
 
-```
 clone the reposiroty to your local machine
 
+```
 git clone https://github.com/jigumany/CyberSecurity.git
 
 cd CyberSecurity
@@ -37,6 +37,7 @@ Here is how you run linting test
 
 ```
 Special commands so you don't feel lost in doing so
+
 ```
 
 ### Unit Tests
@@ -44,7 +45,7 @@ Special commands so you don't feel lost in doing so
 Here is how you run unit tests :-P
 
 ```
-Yes, more commands, this is the real deal now
+phpunit
 ```
 
 ### Integration Tests
