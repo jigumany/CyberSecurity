@@ -15,7 +15,9 @@ Sometimes there are libs that are necessary to run the projects
 Installation steps are necessary so go through each step to do so
 
 ```
-clone the reposiroty to your local machine (git clone https://github.com/jigumany/CyberSecurity.git)
+clone the reposiroty to your local machine
+
+git clone https://github.com/jigumany/CyberSecurity.git
 
 cd CyberSecurity
 
@@ -67,7 +69,8 @@ I will give you the steps to deploy soon
 
 ## Code Owners
 
--   **Some dude that wants credit** - _Yep I did the whole project, no one helped. Sigh.. I'm joking it was a team effort_ - [George Manyara](https://github.com/jigumany)
+-   [George Manyara](https://github.com/jigumany)
+-   [Fungayi Makoni](https://github.com/fungayimakoni)
 
 ## License
 
