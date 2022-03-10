@@ -59,7 +59,7 @@ php artisan key:generate
 Here is how you run unit tests :-P
 
 ```
-phpunit
+vendor/bin/phpunit
 ```
 
 ### Integration Tests
