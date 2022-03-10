@@ -38,6 +38,13 @@ composer install
 
 ```
 
+#### create a .env file
+
+```
+cp .env.example .env
+
+```
+
 #### generate a new app key
 
 ```
