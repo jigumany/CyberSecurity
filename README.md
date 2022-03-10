@@ -6,36 +6,39 @@ An easy to use online educational platform.
 
 ### Prerequisites
 
-Sometimes there are libs that are necessary to run the projects
+all important libraries will be listed here
 
--   any important libraries will be listed here soon
+```
+
+
+```
 
 ### Installing
 
 Installation steps are necessary so go through each step to do so
 
--   clone the reposiroty to your local machine
+#### clone the reposiroty to your local machine
 
 ```
 git clone https://github.com/jigumany/CyberSecurity.git
 
 ```
 
--   navigate to the created project folder
+#### navigate to the created project folder
 
 ```
 cd CyberSecurity
 
 ```
 
--   install composer dependencies
+#### install composer dependencies
 
 ```
 composer install
 
 ```
 
--   generate a new app key
+#### generate a new app key
 
 ```
 php artisan key:generate
@@ -43,8 +46,6 @@ php artisan key:generate
 ```
 
 ## Running Tests
-
-will tell you as soon as i have written some tests
 
 ### Unit Tests
 
