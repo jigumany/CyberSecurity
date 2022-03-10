@@ -1,6 +1,6 @@
 # CyberSecurity
 
-An easy to use online educational platform
+An easy to use online educational platform.
 
 ## Getting Started
 
@@ -14,15 +14,30 @@ Sometimes there are libs that are necessary to run the projects
 
 Installation steps are necessary so go through each step to do so
 
-clone the reposiroty to your local machine
+-   clone the reposiroty to your local machine
 
 ```
 git clone https://github.com/jigumany/CyberSecurity.git
 
+```
+
+-   navigate to the created project folder
+
+```
 cd CyberSecurity
 
+```
+
+-   install composer dependencies
+
+```
 composer install
 
+```
+
+-   generate a new app key
+
+```
 php artisan key:generate
 
 ```
@@ -30,15 +45,6 @@ php artisan key:generate
 ## Running Tests
 
 will tell you as soon as i have written some tests
-
-### Linter
-
-Here is how you run linting test
-
-```
-Special commands so you don't feel lost in doing so
-
-```
 
 ### Unit Tests
 
@@ -50,19 +56,7 @@ phpunit
 
 ### Integration Tests
 
-Here is how you run unit tests :-P
-
-```
-Yes, more commands, this is the real deal now
-```
-
-### E2E Tests
-
-Here is how you run unit tests :-P
-
-```
-Yes, more commands, this is the real deal now
-```
+I will update intergration tests soon
 
 ## How To Deploy
 
@@ -79,4 +73,7 @@ The Cybersecurity application is open-sourced software licensed under the [MIT l
 
 ## Acknowledgments
 
--   will be giving credit to other people here soon.
+-   All Credit goes to the code owners
+
+-   [George Manyara](https://github.com/jigumany)
+-   [Fungayi Makoni](https://github.com/fungayimakoni)
