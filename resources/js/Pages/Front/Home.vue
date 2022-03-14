@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h1>Home</h1>
+        <h1>Welcome To CyberSecurity App</h1>
     </div>
 </template>
 <script>
