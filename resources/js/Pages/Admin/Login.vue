@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h1>Admin Login</h1>
+        <h1>Admin Login Page</h1>
     </div>
 </template>
 <script>
