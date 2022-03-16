@@ -1,4 +1,8 @@
+const process = require("process");
 const mix = require("laravel-mix");
+const cssImport = require("postcss-import");
+const cssNesting = require("tailwindcss/nesting");
+const webpackConfig = require("./webpack.config");
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +16,14 @@ const mix = require("laravel-mix");
  */
 
 mix.js("resources/js/app.js", "public/js")
-    .vue(3)
-    .postCss("resources/css/app.css", "public/css", [])
-    .version();
+    .vue({
+        runtimeOnly: (process.env.NODE_ENV || "production") === "production",
+    })
+    .webpackConfig(webpackConfig)
+    .postCss("resources/css/app.css", "public/css", [
+        cssImport(),
+        cssNesting(),
+        require("tailwindcss"),
+    ])
+    .version()
+    .sourceMaps();
