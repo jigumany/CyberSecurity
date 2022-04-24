@@ -1,6 +1,6 @@
 # CyberSecurity
 
-An easy to use online educational platform.
+An easy to use online educational platform. Inertia and Vue-3
 
 ## Getting Started
 
