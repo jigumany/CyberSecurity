@@ -9,11 +9,7 @@
               class="mt-1"
               href="/admin"
             >
-            <logo
-              class="fill-white"
-              width="120"
-              height="28"
-            />
+            <h1 class="text-center text-2xl font-bold text-white">CyberSecurity</h1>
             </Link>
             <dropdown
               class="md:hidden"
@@ -36,7 +32,7 @@
             </dropdown>
           </div>
           <div class="md:text-md flex items-center justify-between p-4 w-full text-sm bg-white border-b md:px-12 md:py-0">
-            <div class="mr-4 mt-1"></div>
+            <div class="mr-4 mt-1">CyberSecurity</div>
             <dropdown
               class="mt-1"
               placement="bottom-end"
@@ -44,8 +40,8 @@
               <template #default>
                 <div class="group flex items-center cursor-pointer select-none">
                   <div class="mr-1 text-gray-700 group-hover:text-indigo-600 focus:text-indigo-600 whitespace-nowrap">
-                    <span></span>
-                    <span class="hidden md:inline">&nbsp;</span>
+                    <span>{{ auth.user.first_name }}</span>
+                    <span class="hidden md:inline">&nbsp;{{ auth.user.last_name }}</span>
                   </div>
                   <icon
                     class="w-5 h-5 fill-gray-700 group-hover:fill-indigo-600 focus:fill-indigo-600"
@@ -55,12 +51,17 @@
               </template>
               <template #dropdown>
                 <div class="mt-2 py-2 text-sm bg-white rounded shadow-xl">
-
+                  <Link
+                    class="block px-6 py-2 hover:text-white hover:bg-indigo-500"
+                    :href="`/admin/admins/${auth.user.id}/edit`"
+                  >My Profile</Link>
+                  <Link
+                    class="block px-6 py-2 hover:text-white hover:bg-indigo-500"
+                    href="/admin/admins"
+                  >Manage Admins</Link>
                   <Link
                     class="block px-6 py-2 w-full text-left hover:text-white hover:bg-indigo-500"
                     href="/admin/logout"
-                    method="delete"
-                    as="button"
                   >Logout</Link>
                 </div>
               </template>
@@ -88,6 +89,7 @@ import Icon from "@/Shared/Icon";
 import Logo from "@/Shared/Logo";
 import Dropdown from "@/Shared/Dropdown";
 import MainMenu from "@/Shared/MainMenu";
+import FlashMessages from "@/Shared/FlashMessages";
 
 export default {
   components: {
@@ -96,6 +98,7 @@ export default {
     Link,
     Logo,
     MainMenu,
+    FlashMessages,
   },
   props: {
     auth: Object,

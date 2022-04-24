@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <Head title="Dashboard" />
-    <h1 class="mb-8 text-3xl font-bold">Dashboard</h1>
-    <p class="mb-8 leading-normal">Hey there! Welcome to Cybersecurity..</p>
+    <Head title="Modules" />
+    <h1 class="mb-8 text-3xl font-bold">Modules</h1>
+    <p class="mb-8 leading-normal">This is where the modules will be listed...</p>
   </div>
 </template>
 

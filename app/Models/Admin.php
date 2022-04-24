@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
@@ -11,7 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Admin extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, SoftDeletes, Notifiable;
 
     protected $guard = 'admin';
 
@@ -42,6 +43,7 @@ class Admin extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'owner' => 'boolean',
         'email_verified_at' => 'datetime',
     ];
 
