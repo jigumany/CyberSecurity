@@ -76,7 +76,7 @@ php artisan migrate --seed
 #### start the development server
 
 ```
-php artisan save
+php artisan serve
 
 ```
 
