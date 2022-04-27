@@ -52,6 +52,34 @@ php artisan key:generate
 
 ```
 
+#### install npm dependencies
+
+```
+npm install
+
+```
+
+#### compile npm packages
+
+```
+npm run dev
+
+```
+
+#### create a Mysql database, add the credentials to your .env file, then migrate and seed the tables
+
+```
+php artisan migrate --seed
+
+```
+
+#### start the development server
+
+```
+php artisan save
+
+```
+
 ## Running Tests
 
 ### Unit Tests
