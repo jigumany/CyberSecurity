@@ -62,6 +62,8 @@
                   <Link
                     class="block px-6 py-2 w-full text-left hover:text-white hover:bg-indigo-500"
                     href="/admin/logout"
+                    method="delete"
+                    as="button"
                   >Logout</Link>
                 </div>
               </template>

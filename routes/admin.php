@@ -11,9 +11,10 @@ use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 // Admin Login Routes
-Route::get('login', [LoginController::class, 'index'])->name('admin.login');
+Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('login', [LoginController::class, 'store'])->name('login.store')->middleware('guest');
-Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
+Route::delete('logout', [LoginController::class, 'destroy'])->name('logout')->middleware('admin');
+
 
 // Only logged in admins can see these pages
 Route::middleware('admin')->group(function(){

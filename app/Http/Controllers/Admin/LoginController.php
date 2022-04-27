@@ -13,23 +13,6 @@ use Inertia\Inertia;
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
-
-    /**
-     * Where to redirect admins after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/admin';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest:admin')->except('logout');
-    }
     /**
      * Display the login view.
      *
@@ -61,13 +44,12 @@ class LoginController extends Controller
      */
     public function destroy(Request $request)
     {
-        // Auth::guard('admin')->logout();
+        Auth::guard('admin')->logout();
 
-        // $request->session()->invalidate();
+        $request->session()->invalidate();
 
-        // $request->session()->regenerateToken();
+        $request->session()->regenerateToken();
 
-        // return redirect('/admin/login');
-        dd('yess');
+        return redirect('/admin/login');
     }
 }
