@@ -18,6 +18,8 @@ Route::delete('logout', [LoginController::class, 'destroy'])->name('logout')->mi
 
 // Only logged in admins can see these pages
 Route::middleware('admin')->group(function(){
+
+    // Dashboard
     Route::get('/', [DashboardController::class, 'index']);
     Route::get('/pages', [PageController::class, 'index']);
     Route::get('/modules', [ModuleController::class, 'index']);
@@ -40,6 +42,22 @@ Route::middleware('admin')->group(function(){
         ->name('admins.destroy');
     Route::put('admins/{user}/restore', [AdminController::class, 'restore'])
         ->name('admins.restore');
+
+    // Organizations
+    Route::get('modules', [ModuleController::class, 'index'])
+        ->name('modules');
+    Route::get('modules/create', [ModuleController::class, 'create'])
+        ->name('modules.create');
+    Route::post('modules', [ModuleController::class, 'store'])
+        ->name('modules.store');
+    Route::get('modules/{module}/edit', [ModuleController::class, 'edit'])
+        ->name('modules.edit');
+    Route::put('modules/{module}', [ModuleController::class, 'update'])
+        ->name('modules.update');
+    Route::delete('modules/{module}', [ModuleController::class, 'destroy'])
+        ->name('modules.destroy');
+    Route::put('modules/{module}/restore', [ModuleController::class, 'restore'])
+        ->name('modules.restore');
 });
 
 

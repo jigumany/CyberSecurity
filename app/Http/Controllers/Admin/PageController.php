@@ -10,6 +10,6 @@ class PageController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Admin/Pages');
+        return Inertia::render('Admin/Pages/Index');
     }
 }

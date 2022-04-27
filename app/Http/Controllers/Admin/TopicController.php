@@ -10,6 +10,6 @@ class TopicController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Admin/Topics');
+        return Inertia::render('Admin/Topics/Index');
     }
 }

@@ -10,6 +10,6 @@ class ManagerController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Admin/Managers');
+        return Inertia::render('Admin/Managers/Index');
     }
 }
