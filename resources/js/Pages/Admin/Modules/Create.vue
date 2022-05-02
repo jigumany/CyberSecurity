@@ -9,7 +9,7 @@
       >Modules</Link>
       <span class="text-indigo-400 font-medium">/</span> Create
     </h1>
-    <div class="max-w-3xl bg-white rounded-md shadow overflow-hidden">
+    <div class="bg-white rounded-md shadow overflow-hidden">
       <form @submit.prevent="store">
         <div class="flex flex-wrap -mb-8 -mr-6 p-8">
           <text-input
@@ -31,7 +31,7 @@
             class="pb-8 pr-6 w-full lg:w-1/2"
             type="file"
             accept="image/*"
-            label="Photo"
+            label="Badge"
           />
         </div>
         <div class="flex items-center justify-end px-8 py-4 bg-gray-50 border-t border-gray-100">

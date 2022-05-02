@@ -32,6 +32,7 @@
         <thead>
           <tr class="text-left font-bold">
             <th class="pb-4 pt-6 px-6">Name</th>
+            <th class="pb-4 pt-6 px-6">Topics</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +53,26 @@
                 class="flex-shrink-0 ml-2 w-3 h-3 fill-gray-400"
               />
               </Link>
+            </td>
+            <td class="border-t">
+              <ul
+                v-for="topic in module.topics"
+                :key="topic.id"
+              >
+                <li>
+                  <Link
+                    class="flex items-center px-3 py-2 focus:text-indigo-500 hover:text-blue-500"
+                    :href="`/admin/topics/${topic.id}/edit`"
+                  >
+                  {{ topic.name }}
+                  </Link>
+                </li>
+              </ul>
+              <icon
+                v-if="module.deleted_at"
+                name="trash"
+                class="flex-shrink-0 ml-2 w-3 h-3 fill-gray-400"
+              />
             </td>
             <td class="w-px border-t">
               <Link

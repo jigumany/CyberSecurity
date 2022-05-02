@@ -16,13 +16,14 @@ class ModuleController extends Controller
     {
         return Inertia::render('Admin/Modules/Index', [
             'filters' => Request::all('search', 'trashed'),
-            'modules' => Module::orderBy('name')
+            'modules' => Module::with('topics')->orderBy('name')
                 ->filter(Request::only('search', 'trashed'))
                 ->paginate(10)
                 ->withQueryString()
                 ->through(fn ($module) => [
                     'id' => $module->id,
                     'name' => $module->name,
+                    'topics' => $module->topics,
                     'photo' => $module->photo_path ? URL::route('image', ['path' => $module->photo_path, 'w' => 40, 'h' => 40, 'fit' => 'crop']) : null,
                     'deleted_at' => $module->deleted_at,
                 ]),
@@ -58,6 +59,7 @@ class ModuleController extends Controller
                 'id' => $module->id,
                 'name' => $module->name,
                 'description' => $module->description,
+                'topics' => $module->topics,
                 'photo' => $module->photo_path ? URL::route('image', ['path' => $module->photo_path, 'w' => 60, 'h' => 60, 'fit' => 'crop']) : null,
             ],
         ]);
