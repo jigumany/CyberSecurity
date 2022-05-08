@@ -60,6 +60,7 @@ class ModuleController extends Controller
                 'name' => $module->name,
                 'description' => $module->description,
                 'topics' => $module->topics,
+                'deleted_at' => $module->deleted_at,
                 'photo' => $module->photo_path ? URL::route('image', ['path' => $module->photo_path, 'w' => 60, 'h' => 60, 'fit' => 'crop']) : null,
             ],
         ]);

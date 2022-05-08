@@ -55,6 +55,19 @@
     <div class="mb-4">
       <Link
         class="group flex items-center py-3"
+        href="/admin/questions"
+      >
+      <icon
+        name="dashboard"
+        class="mr-2 w-4 h-4"
+        :class="isUrl('admin/questions') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'"
+      />
+      <div :class="isUrl('admin/questions') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Questions</div>
+      </Link>
+    </div>
+    <div class="mb-4">
+      <Link
+        class="group flex items-center py-3"
         href="/admin/managers"
       >
       <icon

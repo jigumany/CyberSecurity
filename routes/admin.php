@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ModuleController;
 use App\Http\Controllers\Admin\TopicController;
+use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ManagerController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdminController;
@@ -72,6 +73,22 @@ Route::middleware('admin')->group(function(){
         ->name('topics.destroy');
     Route::put('topics/{topic}/restore', [TopicController::class, 'restore'])
         ->name('topics.restore');
+
+    // Questions
+    Route::get('questions', [QuestionController::class, 'index'])
+        ->name('questions');
+    Route::get('questions/create', [QuestionController::class, 'create'])
+        ->name('questions.create');
+    Route::post('questions', [QuestionController::class, 'store'])
+        ->name('questions.store');
+    Route::get('questions/{question}/edit', [QuestionController::class, 'edit'])
+        ->name('questions.edit');
+    Route::put('questions/{question}', [QuestionController::class, 'update'])
+        ->name('questions.update');
+    Route::delete('questions/{question}', [QuestionController::class, 'destroy'])
+        ->name('questions.destroy');
+    Route::put('questions/{question}/restore', [QuestionController::class, 'restore'])
+        ->name('questions.restore');
 
     // Managers
     Route::get('/managers', [ManagerController::class, 'index']);

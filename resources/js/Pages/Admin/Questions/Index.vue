@@ -1,8 +1,8 @@
 <template>
   <div>
 
-    <Head title="Topics" />
-    <h1 class="mb-8 text-3xl font-bold">Topics</h1>
+    <Head title="Questions" />
+    <h1 class="mb-8 text-3xl font-bold">Questions</h1>
     <div class="flex items-center justify-between mb-6">
       <search-filter
         v-model="form.search"
@@ -21,42 +21,33 @@
       </search-filter>
       <Link
         class="btn-indigo"
-        href="/admin/topics/create"
+        href="/admin/questions/create"
       >
       <span>Create</span>
-      <span class="hidden md:inline">&nbsp;Topics</span>
+      <span class="hidden md:inline">&nbsp;Questions</span>
       </Link>
     </div>
     <div class="bg-white rounded-md shadow overflow-x-auto">
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="pb-4 pt-6 px-6">ID</th>
-            <th class="pb-4 pt-6 px-6">Name</th>
+            <th class="pb-4 pt-6 px-6">Content</th>
           </tr>
         </thead>
         <tbody>
           <tr
-            v-for="topic in topics.data"
-            :key="topic.id"
+            v-for="question in questions.data"
+            :key="question.id"
             class="hover:bg-gray-100 focus-within:bg-gray-100"
           >
             <td class="border-t">
               <Link
                 class="flex items-center px-6 py-4 focus:text-indigo-500"
-                :href="`/admin/topics/${topic.id}/edit`"
+                :href="`/admin/questions/${question.id}/edit`"
               >
-              {{ topic.id }}
-              </Link>
-            </td>
-            <td class="border-t">
-              <Link
-                class="flex items-center px-6 py-4 focus:text-indigo-500"
-                :href="`/admin/topics/${topic.id}/edit`"
-              >
-              {{ topic.name }}
+              {{ question.content }}
               <icon
-                v-if="topic.deleted_at"
+                v-if="question.deleted_at"
                 name="trash"
                 class="flex-shrink-0 ml-2 w-3 h-3 fill-gray-400"
               />
@@ -65,7 +56,7 @@
             <td class="w-px border-t">
               <Link
                 class="flex items-center px-4"
-                :href="`/admin/topics/${topic.id}/edit`"
+                :href="`/admin/questions/${question.id}/edit`"
                 tabindex="-1"
               >
               <icon
@@ -75,18 +66,18 @@
               </Link>
             </td>
           </tr>
-          <tr v-if="topics.data.length === 0">
+          <tr v-if="questions.data.length === 0">
             <td
               class="px-6 py-4 border-t"
               colspan="4"
-            >No topics found.</td>
+            >No questions found.</td>
           </tr>
         </tbody>
       </table>
     </div>
     <pagination
       class="mt-6"
-      :links="topics.links"
+      :links="questions.links"
     />
   </div>
 </template>
@@ -111,7 +102,7 @@ export default {
   layout: Layout,
   props: {
     filters: Object,
-    topics: Object,
+    questions: Object,
   },
   data() {
     return {
@@ -125,7 +116,7 @@ export default {
     form: {
       deep: true,
       handler: throttle(function () {
-        this.$inertia.get("/admin/topics", pickBy(this.form), {
+        this.$inertia.get("/admin/questions", pickBy(this.form), {
           preserveState: true,
         });
       }, 150),
